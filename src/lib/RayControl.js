@@ -199,7 +199,8 @@ export default class RayControl extends EventDispatcher {
       (selector === handedness)  ||
       (selector === "both" && (handedness === "right" || handedness === "left")) ||
       (selector === "primary" && this.primary === handedness) ||
-      (selector === "secondary" && this.secondary === handedness)
+      (selector === "secondary" && this.secondary === handedness) ||
+      (selector === "primary" && handedness === "none") /*For Google cardboard, let controller be added as handedness is none and selector is primary */
     );
   }
 
